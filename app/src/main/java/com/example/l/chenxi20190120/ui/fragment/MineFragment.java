@@ -43,6 +43,8 @@ public class MineFragment extends Fragment {
     public void onViewClicked() {
         ObjectAnimator animator = ObjectAnimator.ofFloat(imageView, "rotationY", 0f, 180f);
         animator.setDuration(5000);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(imageView, "scaleX", 1f, 2f);
         animator.start();
+        animator2.start();
     }
 }

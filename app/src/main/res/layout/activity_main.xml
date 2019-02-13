@@ -63,7 +63,7 @@
             android:id="@+id/btn_rigist"
             android:textSize="20sp"
             android:text="注册"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="400dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

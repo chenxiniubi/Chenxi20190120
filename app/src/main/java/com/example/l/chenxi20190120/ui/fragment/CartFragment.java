@@ -60,7 +60,7 @@ public class CartFragment extends Fragment implements CartContract.CartView, Vie
 
     @Override
     public void showCartData(String s) {
-
+        //全选反选
         cbAll.setOnCheckedChangeListener(null);
         cbAll.setOnClickListener(this);
 
@@ -108,11 +108,11 @@ public class CartFragment extends Fragment implements CartContract.CartView, Vie
 
     @Override
     public void onClick(View v) {
-        //全选逻辑
+        //全选逻辑的处理
         for (int i = 0; i < beanList.size(); i++) {
-            //让外层商家全部选中
+            //首先让外层的商家条目全部选中
             beanList.get(i).setBussinessChecked(cbAll.isChecked());
-            //让内层商品全部选中
+            //然后让里层的商品条目全部选中
             for (int j = 0; j < beanList.get(i).getList().size(); j++) {
                 beanList.get(i).getList().get(j).setGoodsChecked(cbAll.isChecked());
             }

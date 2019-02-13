@@ -39,6 +39,9 @@ public class CartAdapter extends BaseQuickAdapter<CartBean.DataBean,BaseViewHold
         final CheckBox cb_business = helper.getView(R.id.cb_business);
         cb_business.setOnCheckedChangeListener(null);
 
+        //获取商家条目是否选中状态
+        cb_business.setChecked(item.getBussinessChecked());
+
        //设置商品子条目数据源
         List<CartBean.DataBean.ListBean> beanList = item.getList();
         LinearLayoutManager manager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
